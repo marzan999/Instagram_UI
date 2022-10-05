@@ -226,32 +226,42 @@ class HomePage extends StatelessWidget {
 
           Column(
             children: [
-              Row(
-                children: [
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(1),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                            color: Color.fromARGB(255, 187, 194, 185),
-                            width: 2)),
-                    child: CircleAvatar(
-                      radius: 7,
-                      backgroundImage: NetworkImage(
-                          'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFuJTIwZmFjZXxlbnwwfHwwfHw%3D&w=1000&q=80'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(1),
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                  color: Color.fromARGB(255, 187, 194, 185),
+                                  width: 2)),
+                          child: CircleAvatar(
+                            radius: 7,
+                            backgroundImage: NetworkImage(
+                                'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFuJTIwZmFjZXxlbnwwfHwwfHw%3D&w=1000&q=80'),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'marzan',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'marzan',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ],
+                    Row(
+                      children: [
+                        Icon(Icons.more_vert),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -297,7 +307,7 @@ class HomePage extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
             ],
           ),
           //end
